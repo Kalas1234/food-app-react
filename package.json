@@ -1,0 +1,33 @@
+{
+    "name": "food-ordering-app",
+    "version": "1.0.0",
+    "description": "It is a food order app",
+    "scripts": {
+        "test": "jest",
+         "start": "parcel index.html",
+        "build": "parcel build index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kalas1234/food-app-react.git"
+    },
+    "keywords": [
+        "React",
+        "Redux",
+        "Kalash",
+        "food"
+    ],
+    "author": "Kalash Gangwal",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kalas1234/food-app-react/issues"
+    },
+    "homepage": "https://github.com/Kalas1234/food-app-react#readme",
+    "devDependencies": {
+        "parcel": "^2.13.0"
+    },
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    }
+}
