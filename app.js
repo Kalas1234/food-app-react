@@ -1,52 +1,78 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
+import './app.css';
 
-//creating React element using react 
-const heading  = React.createElement('h1',{id:'heading'},'Kalash React code');
-console.log(heading);//this is react element
+const heading = React.createElement('h1', { id: 'heading' }, 'Kalash React code');
+console.log(heading);
 
-//react element is nothing but an javascript object not an html element 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-//root element where the whole react elemnt is rendered it is the parent most element
+const Header = () => {
+    return (
+        <div className="header">
+            <div className="log-container">
+                <img
+                    src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"
+                    className="logo"
+                />
+            </div>
 
-//createElement -> react element(js object) => (rendering on to the dom it converts to html and then it push to the dom)
+            <div className="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    );
+};
+const RestaurantCard = () => {
+    return (
+        <div className="res-card" style={{backgroundColor:'#f0f0f0'}}>
+            <img
+            className='res-logo'
+            src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/e0vvulfbahjxjz6k4uwi'
+            />
+            <h3>Meghna Foods</h3>
+            <h4>Biryani,NorthIndian,Asian</h4>
+            <h4>4 STARS</h4>
+            <h4>38 minutes</h4>
+        </div>
+    );
+};
 
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="res-container">
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+            </div>
+        </div>
+    );
+};
 
+const AppLayout = () => {
+    return (
+        <div id="app">
+            <Header />
+            <Body />
+        </div>
+    );
+};
 
-
-//creating react element using jsx 
-
-const jsxHeading = <h1 id='heading'>Kalash React code</h1>
-const multiJsx = (
-                 <h1 className="head">
-                    hello
-                    </h1>
-                   )  //multiline jsx
-//when this line executes jsx becomes react element
-
-const HeadingComponent = ()=>{
-   return <h1 className='heading'>Namste javascript functional component</h1>
-}
-const HeadingComponent1 = ()=> <h1 className='heading'>Namste javascript functional component1</h1>
-
-const title = (
-   <h1>React element title</h1>
-)
-const elem = (
-   <div id='container'>
-   <h1 className='heading'>Namste javascript functional component2</h1>
-   {title}
-   </div>
-)
-const HeadingComponent2 =()=>(
-   <div id='container'>
-   <h1 className='heading'>Namste javascript functional component2</h1>
-   {title}
-   </div>
-)
-
-const TitleComponent =()=>(
- <h1 className='"head' tabIndex="5">Namaste Ttile</h1>
-)
-console.log(jsxHeading)
-root.render(<HeadingComponent2 />) //this is react element
+root.render(<AppLayout />);
