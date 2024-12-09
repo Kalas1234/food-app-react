@@ -19,11 +19,9 @@
 }
 .res-card {
     width: 200px;
-    height: 300px;
     margin: 15px 5px;
     padding: 5px;
     position: relative;
-    overflow: scroll;
 }
 .res-card:hover{
     border: 1px solid black;
@@ -42,5 +40,32 @@
 .res-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start
+    justify-content: space-between
+}
+.overflow-handle{
+    overflow: scroll;
+}
+.filter{
+    display: flex;
+    margin-top: 7px;
+}
+.filter-btn{
+    margin: 6px;
+    cursor: pointer;
+
+}
+.shimmer-cards {
+    width:200px;
+    height: 400px;
+    margin:20px;
+    background-color: #f0f0f0;
+}
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.login{
+    border-radius: 2px;
+    border:2px solid black;
+    padding: 0px 20px;
 }
