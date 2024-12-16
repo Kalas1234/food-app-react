@@ -13,6 +13,9 @@
 }
 .nav-items {
     padding: 0 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-items > ul > li {
     margin: 20px;
@@ -68,4 +71,10 @@
     border-radius: 2px;
     border:2px solid black;
     padding: 0px 20px;
+}
+.Link{
+    display: flex;
+    gap:22px;
+    padding : 4px 0px;
+    margin : 4px 0px
 }
