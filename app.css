@@ -57,6 +57,11 @@
     cursor: pointer;
 
 }
+.btn-count{
+    width:94px;
+    height:36px;
+    border-radius: 7px;
+}
 .shimmer-cards {
     width:200px;
     height: 400px;
@@ -77,4 +82,10 @@
     gap:22px;
     padding : 4px 0px;
     margin : 4px 0px
+}
+.user-card{
+
+    padding:10px;
+
+    border:1px solid black;
 }
