@@ -4,13 +4,13 @@ const RestaurantCard = ({ resData }) => {
     const {cloudinaryImageId,avgRatingString,costForTwo,name,cuisines} = resData?.info
     const {deliveryTime} = resData?.info?.sla
      return (
-         <div className="res-card" style={{ backgroundColor: '#f0f0f0' }}>
+         <div className="m-4 p-4 w-[250px] bg-gray-100 hover:bg-gray-400">
              <img
-                 className="res-logo"
+                 className="res-logo rounded-lg w-[100%] h-[35%]"
                  src={`${CDN_URL}/${cloudinaryImageId}`}
              />
-             <h3>{name}</h3>
-             <h4 className='overflow-handle'>{cuisines.join(',')}</h4>
+             <h3 className='font-bold text-lg py-4'>{name}</h3>
+             <h4 className='overflow-scroll'>{cuisines.join(',')}</h4>
              <h4>{avgRatingString} Star</h4>
              <h4>{deliveryTime} Minutes</h4>
              <h4>{costForTwo}</h4>

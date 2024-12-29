@@ -16,7 +16,7 @@ const User = ({name, location}) => {
         };
       }, []); // Dependency array ensures this effect runs only once
     return (
-        <div className="user-card">
+        <div className="user-card p-[10px] border border-solid border-black" >
             <h2>name:{name}</h2>
             <h3>Location:{location}</h3>
             <h4>contact: kalashgangwal3030@gmail.com</h4>

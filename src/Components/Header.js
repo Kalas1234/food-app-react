@@ -12,23 +12,23 @@ const Header = () => {
     }, [btnNmaeReact])
 
     return (
-        <div className="header">
+        <div className="flex bg-pink-50 shadow-lg justify-between">
             <div className="log-container">
                 <img
                     src={LOGO_URL}
-                    className="logo"
+                    className="w-56"
                 />
             </div>
 
-            <div className="nav-items">
+            <div className="flex items-center">
                 <ul>
-                    <div className="Link">
-                        <li>Status : {onlineStatus===true ? '✅' : '🔴'}</li>
-                        <Link to='/'>Home</Link>
-                        <Link to='/about'>About us</Link>
-                        <Link to='/contact'>Contact</Link>
-                        <Link to='/grocery'>Grocery</Link>
-                        <button className="login" onClick={() => {
+                    <div className="flex p-4 m-4 ">
+                        <li className="px-4">Status : {onlineStatus===true ? '✅' : '🔴'}</li>
+                        <Link className="px-4" to='/'>Home</Link>
+                        <Link className="px-4" to='/about'>About us</Link>
+                        <Link className="px-4" to='/contact'>Contact</Link>
+                        <Link className="px-4" to='/grocery'>Grocery</Link>
+                        <button className="border-2 border-black py-1 px-4 shadow-lg rounded-md" onClick={() => {
                             btnNmaeReact === 'Login' ? setBtnNameReact('Logout') : setBtnNameReact('Login')
                         }} >
                             {btnNmaeReact}

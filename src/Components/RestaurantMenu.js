@@ -8,15 +8,15 @@ const RestaurantMenu = () => {
     const { name, cuisines, costForTwoMessage } = resData?.cards[2]?.card?.card?.info;
     const { itemCards } = resData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card.card;
     return (
-        <div className="menu">
-            <h1>{name}</h1>
-            <h2>
+        <div className="text-center my-3">
+            <h1 className='font-bold'>{name}</h1>
+            <h2 className='font-bold text-lg'>
                 {cuisines.join(',')} - {costForTwoMessage}
             </h2>
             <h2>Menu</h2>
             <ul>
                 {itemCards.map((res, index) => (
-                    <li key={index}>
+                    <li className ='font-bold text-lg' key={index}>
                         {res.card?.info?.name} - {res.card?.info?.price / 100 || res.card?.info?.defaultPrice / 100} Rs
                     </li>
                 ))}

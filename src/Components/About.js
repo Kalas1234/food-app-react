@@ -17,9 +17,8 @@ class About extends React.Component {
     render() {
         console.log('parent render')
         return (
-            <div>
-                <h1>This is Fodd app developed by kalash</h1>
-                <User name="kalash" location="bengaluru" />
+            <div className='mt-40 py-5 text-center'>
+                <h1 className='font-bold text-xl'>This is Food App Developed By kalash</h1>
                 <UserClass name="child1" location="indore" />
             </div>
         )

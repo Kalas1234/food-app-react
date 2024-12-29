@@ -5,7 +5,6 @@ class UserClass extends React.Component {
         super(props);
         console.log(this.props.name,'child constructor called');
         this.state = {
-            count: 0,
            userInfo : {}
         };
     }
@@ -33,24 +32,11 @@ class UserClass extends React.Component {
     render() {
         console.log(this.props.name,'child render method called');
         return (
-            <div className="user-card">
-                <span>
-                    <button
-                        className="btn-count"
-                        onClick={() => {
-                            this.setState({
-                                count: this.state.count + 1
-                            });
-                        }}>
-                        {' '}
-                        Increment
-                    </button>
-                    <h1>Count:{this.state.count}</h1>
-                </span>
-                <img src = {this.state.userInfo.avatar_url} style={{"width":'80px'}} />
-                <h2>name:{this.state.userInfo.name}</h2>
-                <h3>Location:{this.state.userInfo.location}</h3>
-                <h4>contact: kalashgangwal3030@gmail.com</h4>
+            <div className="border border-solid border-black my-9 shadow-lg bg-gray-100 pb-10">
+                <img  className='w-14'src = {this.state.userInfo.avatar_url} />
+                <h2 className='font-bold'>{this.state.userInfo.name}</h2>
+                <h3 className='font-bold'>{this.state.userInfo.location}</h3>
+                <h4 className='font-bold'>kalashgangwal3030@gmail.com</h4>
             </div>
         );
     }
