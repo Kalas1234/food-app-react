@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './Components/Header';
 import Body from './Components/Body';
@@ -8,6 +8,9 @@ import RestaurantMenu from './Components/RestaurantMenu';
 import "../app.css";
 import { createBrowserRouter, RouterProvider,Outlet } from 'react-router-dom';
 import Error from './Components/Error';
+
+const Grocery = lazy(()=> import('./Components/grocery'))  // lazy is a function provided by react package in that function we pass a callback function which consisit the path of the component for which we need to do lazy loading.
+console.log('check5',Grocery)
 
 const AppLayout = () => {
     return (
@@ -40,6 +43,10 @@ const appRouter = createBrowserRouter([
             {
                 path:"/restaurant/:resId",
                 element: <RestaurantMenu />
+            },
+            {
+                path:"/grocery",
+                element:<Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>
             },
 
         ]
