@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../hooks/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 const Header = () => {
     
     const[btnNmaeReact, setBtnNameReact] = useState('Login')
     const onlineStatus = useOnlineStatus();
+    const {loggedInUser} = useContext(UserContext);
 
     useEffect(() => {
         console.log('useEffect called')
@@ -33,6 +35,7 @@ const Header = () => {
                         }} >
                             {btnNmaeReact}
                         </button>
+                        <li className="px-4">{loggedInUser}</li>
                     </div>
 
                 </ul>
